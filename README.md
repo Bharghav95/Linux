@@ -5,13 +5,13 @@ This repository contains my personal notes and cheat sheets on **Linux**, includ
 ## 📚 Topics Covered
 
 - [x] Introduction to linux
-- [x] Navigating the file systems
-- [x] Working with files and text processing in linux
-- [x] Used and group management
-- [x] Package Management and system updates
-- [x] Processing management & system monitering
-- [x] Networking fundamentals in linux
-- [x] Shell Scripting
+- [ ] Navigating the file systems
+- [ ] Working with files and text processing in linux
+- [ ] Used and group management
+- [ ] Package Management and system updates
+- [ ] Processing management & system monitering
+- [ ] Networking fundamentals in linux
+- [ ] Shell Scripting
       - Shell scripting introduction
       - Basic shell commands
       - Writing your first shell script
