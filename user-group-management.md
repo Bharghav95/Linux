@@ -1,92 +1,76 @@
-👥 User and Group Management in Linux
-Managing users and groups is essential for controlling access to system resources and ensuring security in Linux environments.
+# 👥 User and Group Management in Linux
 
-🧑‍💻 User Management
-✅ Create a New User
-bash
-Copy
-Edit
+Linux systems are multi-user environments. Managing users and groups helps control access, security, and resource permissions.
+
+---
+
+## 👤 User Management
+
+### ✅ Create a New User
+
 sudo adduser john
-Creates a new user with home directory /home/john
+##Creates a user named john and sets up their home directory and basic profile.
 
-Prompts for password and other details
+⚙️ Create User with Custom Options
 
-🧾 Add User Without Prompt
-bash
-Copy
-Edit
 sudo useradd -m -s /bin/bash john
--m: Create home directory
+-m: Creates a home directory
+-s: Sets login shell (e.g., /bin/bash)
 
--s: Set default shell
-
-🔐 Set or Change Password
-bash
-Copy
-Edit
+🔐 Set Password for a User
 sudo passwd john
-❌ Delete a User
-bash
-Copy
-Edit
-sudo deluser john             # Deletes user only
-sudo deluser --remove-home john  # Deletes user and their home directory
-👪 Group Management
-✅ Create a New Group
-bash
-Copy
-Edit
-sudo addgroup devs
-🧑‍🤝‍🧑 Add User to Group
-bash
-Copy
-Edit
-sudo usermod -aG devs john
--aG: Append user to group(s) (important: don’t omit -a!)
+##Promotes u to set password to user
 
-👁️ View Group Membership
-bash
-Copy
-Edit
+❌ Delete a User
+sudo deluser john
+##Removes the user but keeps the home directory.
+
+sudo deluser --remove-home john
+##Removes user and deletes the home directory.
+
+👪 Group Management
+➕ Create a New Group
+sudo addgroup devs
+
+👤➕ Add User to a Group
+sudo usermod -aG devs john
+-a: Append (do not remove from other groups)
+
+-G: Specify the group
+
+👁️ View a User’s Group Membership
 groups john
-❌ Remove User from Group
-bash
-Copy
-Edit
+
+➖ Remove User from a Group
 sudo gpasswd -d john devs
+
 ❌ Delete a Group
-bash
-Copy
-Edit
 sudo delgroup devs
-🗂️ View User and Group Details
-🔍 View All Users
-bash
-Copy
-Edit
+
+📄 View User and Group Info
+🧑 View All Users
 cat /etc/passwd
-🔍 View All Groups
-bash
-Copy
-Edit
+
+👨‍👩‍👧 View All Groups
 cat /etc/group
-🔄 Switch & Act as Another User
-🔁 Switch to Another User
-bash
-Copy
-Edit
+
+🔁 Switching Users
+🔄 Switch to Another User
 su - john
-⚡ Run Command as Another User
-bash
-Copy
-Edit
-sudo -u john command
-🧠 Summary
-Task	Command
-Create user	sudo adduser <username>
-Delete user	sudo deluser <username>
-Create group	sudo addgroup <groupname>
-Add user to group	sudo usermod -aG group user
-Remove user from group	sudo gpasswd -d user group
-Switch user	su - username
-Run command as another user	sudo -u username command
+
+🧠 Run a Command as Another User
+sudo -u john whoami
+
+🧠 Summary Table
+| Action                      | Command                             |
+| --------------------------- | ----------------------------------- |
+| Create user                 | `sudo adduser john`                 |
+| Delete user                 | `sudo deluser john`                 |
+| Create group                | `sudo addgroup devs`                |
+| Add user to group           | `sudo usermod -aG devs john`        |
+| Remove user from group      | `sudo gpasswd -d john devs`         |
+| View user/group info        | `cat /etc/passwd`, `cat /etc/group` |
+| Switch user                 | `su - john`                         |
+| Run command as another user | `sudo -u john command`              |
+
+
