@@ -4,10 +4,10 @@ This repository contains my personal notes and cheat sheets on **Linux**, includ
 
 ## 📚 Topics Covered
 
-- [ ] Introduction to linux
+- [x] Introduction to linux
 - [x] Navigating the file systems
 - [ ] Working with files and text processing in linux
-- [ ] Used and group management
+- [ ] User and group management
 - [ ] Package Management and system updates
 - [ ] Processing management & system monitering
 - [ ] Networking fundamentals in linux
