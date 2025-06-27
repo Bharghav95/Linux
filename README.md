@@ -6,7 +6,7 @@ This repository contains my personal notes and cheat sheets on **Linux**, includ
 
 - [x] Introduction to linux
 - [x] Navigating the file systems
-- [ ] Working with files and text processing in linux
+- [x] Working with files and text processing in linux
 - [ ] Used and group management
 - [ ] Package Management and system updates
 - [ ] Processing management & system monitering
